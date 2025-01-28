@@ -1,15 +1,13 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import {Orbitron} from 'next/font/google'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const orbitronFont = Orbitron({
+  variable:"--font-orbitron",
+  subsets:['latin'],
+  weight:['400','600']
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -18,8 +16,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="pt-br">
+      <body className={`${orbitronFont.variable}`}>
+        <header >
+          <h4>EXERCÍCIO 3 - CATÁLOGO DE ESPAÇONAVES</h4>
+          <div className="router-links">
+            <Link href={'/'}>Ínicio</Link>
+            <Link href={'/espaconaves'}>Espaçonaves</Link>
+            <Link href={'/categorias'}>Categorias</Link>
+          </div>
+        </header>
         {children}
       </body>
     </html>

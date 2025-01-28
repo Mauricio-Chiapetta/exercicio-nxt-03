@@ -1,0 +1,22 @@
+.gridSpaceship {
+    display: grid;
+    grid-template-columns: repeat(3,2fr); /* Três colunas no grid */
+    gap: 1rem; /* Espaçamento entre itens */
+}
+.root{
+    padding: 2rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    color: #f2f530;
+    margin-bottom: .4rem;
+}
+
+.button{
+    width: 100%;
+    padding: 1rem;
+}
