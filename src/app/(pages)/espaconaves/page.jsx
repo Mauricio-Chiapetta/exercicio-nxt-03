@@ -10,7 +10,7 @@ export default function Espaconaves() {
           {spaceships.map((spaceship) => (
             // aqui no link da para colocar inves de /spaceship.id -> /spaceship.name
             // e levar para a pagina de espaconave com aquele nome, fica mais facil
-            <Link key={spaceship.id} href={`/espaconaves/${spaceship.name}`}>
+            <Link key={spaceship.id} href={`/espaconaves/${spaceship.id}`}>
               <button className={styles.button}>{spaceship.name}</button>
             </Link>
           ))}
